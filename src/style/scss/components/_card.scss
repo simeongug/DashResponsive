@@ -1,0 +1,25 @@
+.pannel_card{
+    
+    border-radius: $border-radius-1;
+    width: 100%;
+    height: 100%;
+}
+
+.my-dark-theme{
+    .pannel_card{
+        border: $border-dark-1;
+        background-color: $card-bg-dark;
+        color: $color-dark;
+        box-shadow: $card-shadow-dark;
+        
+    }
+}
+.my-light-theme{
+    .pannel_card{
+        border: $border-light-1;
+        background-color: $card-bg-light;
+        color: $color-dark;
+        box-shadow: $card-shadow-light;
+
+    }
+}

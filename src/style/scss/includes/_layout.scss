@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+html {
+    font-size: 14px;
+}
+
+body {
+    width: 100vw;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.88rem;
+    color: $color-dark;
+    letter-spacing: 0.25px;
+    transition: $transition;
+}
+
+.d-flex {
+    display: flex;
+}
+.align-items-center {
+    align-items: center;
+}
+.align-items-end {
+    align-items: end;
+}
+.justify-content-between {
+    justify-content: space-between;
+}
+.justify-content-center {
+    justify-content: center;
+}
+.h-100 {
+    height: 100%;
+}
+
+.primary_icon {
+    font-size: 20px;
+    height: 20px;
+    line-height: 20px;
+    width: 20px;
+    &.round_icon {
+        padding: 20px;
+        background: $color-seconday-varient;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+}
+
+.relative {
+    position: relative;
+}
+
+.pad_1 {
+    padding: 20px;
+}
+
+.color_secondary {
+    color: $color-seconday;
+}
+.color_primary {
+    color: $color-primary;
+}
+
+.card_title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.card_info {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: $color-white;
+}
+.card_light {
+    color: $color-white;
+}
+
+
+.large_title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    z-index: 10001;
+    width: fit-content;
+    @media ( min-width: 900px ){
+        position: sticky;
+        top: 0px;
+
+    }
+}
+
+// margin
+.mr-1 {
+    margin-right: 0.5rem;
+}
+.ml-1 {
+    margin-left: 0.5rem;
+}
+.mr-2 {
+    margin-right: 1rem;
+}
+.mb-2 {
+    margin-bottom: 1rem;
+}
+
+// float
+.float-right {
+    float: right;
+}
+
+// outline_btn
+.my_outlined_btn .MuiButton-root {
+    padding: 8px;
+    min-width: unset;
+    .MuiButton-startIcon {
+        margin: 0;
+        svg {
+            font-size: 16px;
+        }
+    }
+}
+
+
+.my-light-theme{
+    .card_light {
+        color: $card-bg-dark;
+    }
+}
+
+
+
+// hide in mob
+.mob_hidden{
+    @media ( max-width: 900px){
+        display: none !important;
+    }
+}
+// hide in desktop
+
+.md_hidden{
+    @media ( min-width: 900px){
+        display: none !important;
+    }
+}

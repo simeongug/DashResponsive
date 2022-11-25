@@ -1,0 +1,53 @@
+.my-dark-theme {
+    .MuiInputLabel-formControl {
+        color: $color-info-dark !important;
+    }
+    .MuiOutlinedInput-root {
+        .MuiOutlinedInput-notchedOutline {
+            border-color: $color-info-dark !important;
+        }
+        &:not(.Mui-focused) {
+            &:hover {
+                .MuiOutlinedInput-notchedOutline {
+                    border-color: $dark_bg !important;
+                }
+            }
+        }
+    }
+    .MuiOutlinedInput-input {
+        color: $color-info-dark !important;
+    }
+    .MuiFormHelperText-root {
+        color: $color-warning-dark !important;
+        margin-left: 0px !important;
+        position: absolute;
+        bottom: -20px;
+    }
+    .Mui-error {
+        &.MuiInputLabel-formControl {
+            color: $color-warning-dark !important;
+        }
+        .MuiOutlinedInput-notchedOutline {
+            border-color: $color-warning-dark !important;
+        }
+    }
+
+    .MuiSelect-iconOutlined {
+        color: $color-info-dark !important;
+    }
+    .MuiPaper-root {
+        background-color: $background-dark-body !important;
+        .MuiMenuItem-root {
+            color: $color-info-dark !important;
+        }
+    }
+}
+.my-light-theme{
+    .MuiPaper-root {
+        background-color: $background-light-body !important;
+        .MuiMenuItem-root {
+            color: $card-bg-dark !important;
+        }
+    }
+
+}

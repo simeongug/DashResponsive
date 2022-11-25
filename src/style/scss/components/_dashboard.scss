@@ -1,0 +1,369 @@
+.body_wrapper {
+    display: flex;
+    // sideNav
+    .side_nav {
+        position: fixed;
+        height: 100vh;
+        width: $sidebar-width;
+        background-attachment: fixed;
+        background-image: url("../../public/images/side_nav_bg.png");
+        background-position: left 0 bottom 0;
+        background-repeat: no-repeat;
+        background-size: $sidebar-width 556px;
+        display: flex;
+        flex-direction: column;
+        transition: $transition;
+        z-index: 20000;
+        .nav_wrapper {
+            .side_nav_list {
+                display: flex;
+                flex-direction: column;
+                .side_bar_logo {
+                    padding: 10px 20px;
+                    margin-bottom: 40px;
+                    .logo_icon {
+                        img {
+                            height: 28px;
+                        }
+                        h3 {
+                            font-size: 2rem;
+                            line-height: 30px;
+                            margin-left: 18px;
+                            transition: $transition;
+                            visibility: unset;
+                            @media (max-width: 900px) {
+                                visibility: unset !important;
+                                opacity: 1;
+                                transform: translateX(0px);
+                            }
+                        }
+                    }
+                }
+                .main_menu {
+                    flex-grow: 1;
+                    .menu-item {
+                        transition: all 0.15s ease;
+                        &.expandable_nav {
+                            border-bottom: 1px solid;
+                            backdrop-filter: blur(4px);
+                            cursor: pointer;
+                            display: block;
+                            letter-spacing: 0.25px;
+                            max-width: 100%;
+                            padding: 20px 24px;
+                            position: relative;
+                            text-align: left;
+                            .nav_content {
+                                .nav_item {
+                                    font-size: 15px;
+                                    font-weight: 500;
+                                    line-height: 15px;
+                                    margin-left: 1rem;
+                                    white-space: nowrap;
+                                    transition: $transition;
+                                    visibility: unset;
+                                    @media (max-width: 900px) {
+                                        visibility: unset !important;
+                                        opacity: 1;
+                                        transform: translateX(0px);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .togle_button {
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    flex: none;
+                    height: 44px;
+                    padding: 10px 24px;
+                    position: relative;
+                    justify-content: end;
+                    border-top: 1px solid;
+                    i {
+                        transition: $transition;
+                        height: 14px;
+                    }
+                }
+            }
+        }
+        &.togle_side_drawer {
+            width: $sidebar-width-togle;
+            .menu-item {
+                .nav_item {
+                    transform: translateX(100px);
+                    opacity: 0;
+                    visibility: hidden !important;
+                }
+                @media (min-width: 900px) {
+                    &:after {
+                        content: attr(data-tooltip);
+                        position: absolute;
+                        top: 55%;
+                        transform: translate(110%, -50%);
+                        right: 0;
+                        width: fit-content;
+                        height: fit-content;
+                        padding: 5px 10px;
+                        border-radius: 10px;
+                        font-size: 10px;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: all 0.1s ease-in-out;
+                    }
+                }
+                &:hover {
+                    &:after {
+                        opacity: 1;
+                        visibility: unset;
+                    }
+                }
+            }
+            .togle_button {
+                i {
+                    transform: rotate(180deg);
+                }
+            }
+            .side_bar_logo {
+                .logo_icon {
+                    h3 {
+                        transform: translateX(100px);
+                        opacity: 0;
+                        visibility: hidden !important;
+                    }
+                }
+            }
+        }
+    }
+    // topBar
+    .appTopBar {
+        height: $top-bar-height;
+        width: calc(100% - $sidebar-width);
+        position: fixed;
+        top: 0px;
+        right: 0;
+        padding: 8px 24px;
+        transition: $transition;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        backdrop-filter: blur(20px);
+        border-width: 0px 0px thin;
+        border-style: solid;
+
+        z-index: 1000;
+        .left_actions {
+            flex-grow: 1;
+        }
+
+        &.togle_top_bar {
+            width: calc(100% - $sidebar-width-togle);
+        }
+    }
+    // main body
+    .body_content {
+        width: calc(100% - $sidebar-width);
+        position: absolute;
+        right: 0px;
+        top: $top-bar-height;
+        padding: 20px 20px;
+        transition: $transition;
+        &.togle_side_drawer {
+            width: calc(100% - $sidebar-width-togle);
+        }
+    }
+}
+
+@media screen and (max-width: "767px") {
+    .body_wrapper {
+        .side_nav {
+            transform: translateX(-100%);
+            &.togle_side_drawer {
+                transform: translateX(0);
+                width: $sidebar-width;
+            }
+        }
+        .appTopBar,
+        .appTopBar.togle_top_bar,
+        .body_content,
+        .body_content.togle_side_drawer {
+            width: 100%;
+        }
+        .body_content {
+            .sideNavOverLay {
+                &::before {
+                    content: "";
+                    width: 100vw;
+                    height: 100vh;
+                    position: absolute;
+                    top: 0px;
+                    right: 0;
+                }
+            }
+        }
+    }
+}
+
+// theme
+.my-dark-theme {
+    .body_wrapper {
+        .side_nav {
+            background-color: $color-background-dark;
+            .nav_wrapper {
+                .side_nav_list {
+                    .side_bar_logo {
+                        .logo_icon {
+                            h3 {
+                                color: $color-white;
+                            }
+                        }
+                    }
+                    .main_menu {
+                        .menu-item {
+                            &.expandable_nav {
+                                border-color: $border-side-nav;
+                                background-color: $gray_bg;
+                                .nav_content {
+                                    i {
+                                        color: $color-info-dark;
+                                    }
+                                    .nav_item {
+                                        color: $color-info-dark;
+                                    }
+                                }
+                            }
+                            &:hover {
+                                background-color: $hover-side-nav;
+                            }
+                        }
+                    }
+                    .togle_button {
+                        border-color: $border-side-nav;
+                        i {
+                            color: $color-info-dark;
+
+                            &:hover {
+                                color: $color-white;
+                            }
+                        }
+                        &:hover {
+                            i {
+                                color: $color-white;
+                            }
+                        }
+                    }
+                }
+            }
+            &.togle_side_drawer {
+                .menu-item {
+                    &:after {
+                        background: $dark_bg;
+
+                        color: $color-info-dark;
+                    }
+                    &:hover {
+                        background-color: $hover-side-nav;
+                    }
+                }
+                .togle_button {
+                    i {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+        .appTopBar {
+            background-color: $color-background-dark;
+            border-color: $border-side-nav;
+        }
+        .body_content {
+            color: $color-white;
+        }
+    }
+}
+.my-light-theme {
+    .body_wrapper {
+        .side_nav {
+            background-color: $color-background-light;
+            @media (max-width: 900px) {
+                background-color: $drawer-mob-background-light;
+            }
+            .nav_wrapper {
+                .side_nav_list {
+                    .side_bar_logo {
+                        .logo_icon {
+                            h3 {
+                                color: $color-dark_a;
+                            }
+                        }
+                    }
+                    .main_menu {
+                        .menu-item {
+                            &.expandable_nav {
+                                border-color: $border-side-nav;
+                                background-color: $gray_bg;
+                                .nav_content {
+                                    i {
+                                        color: $color-info-dark;
+                                    }
+                                    .nav_item {
+                                        color: $color-info-dark;
+                                    }
+                                }
+                            }
+                            &:hover {
+                                background-color: $hover-side-nav;
+                            }
+                        }
+                    }
+                    .togle_button {
+                        border-color: $border-side-nav;
+                        i {
+                            color: $color-info-dark;
+
+                            &:hover {
+                                color: $color-dark_a;
+                            }
+                        }
+                        &:hover {
+                            i {
+                                color: $color-dark_a;
+                            }
+                        }
+                    }
+                }
+            }
+            &.togle_side_drawer {
+                .menu-item {
+                    &:after {
+                        background: $dark_bg;
+
+                        color: $color-info-dark;
+                    }
+                    &:hover {
+                        background-color: $hover-side-nav;
+                    }
+                }
+                .togle_button {
+                    i {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+        .appTopBar {
+            background-color: $color-background-light;
+            border-color: $border-side-nav;
+        }
+        .body_content {
+            color: $color-dark_a;
+            .sideNavOverLay {
+                &::before {
+                    background: $overlay_bg_light;
+                }
+            }
+        }
+    }
+}
