@@ -5,6 +5,8 @@ import PanelCard from '../components/card/PanelCard'
 import BarChart from '../components/charts/BarChart'
 import ScreenTitle from '../components/screenTitle/ScreenTitle'
 import Datatables from '../components/datatables/Datatables'
+import "react-widgets/styles.css";
+import Calendar from "react-widgets/Calendar";
 
 const Home = () => {
   return (
@@ -16,12 +18,11 @@ const Home = () => {
             <Grid item xs={12} sm={12} md={6}>
               <PanelCard>
                 <DashboardContent
-                  card_title='Maxime'
-                  card_icon={<i className="fas fa-home-alt primary_icon round_icon color_primary"></i>}
-                  card_info='45,450'
-                  last_text='18%'
-                />
+
+
+                />    <Calendar></Calendar>
               </PanelCard>
+
             </Grid>
             <Grid item xs={12} sm={12} md={6}>
               <PanelCard>
