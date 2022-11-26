@@ -16,7 +16,7 @@ const Home = () => {
             <Grid item xs={12} sm={12} md={6}>
               <PanelCard>
                 <DashboardContent
-                  card_title='Inquiries'
+                  card_title='Maxime'
                   card_icon={<i className="fas fa-home-alt primary_icon round_icon color_primary"></i>}
                   card_info='45,450'
                   last_text='18%'
