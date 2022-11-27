@@ -7,6 +7,12 @@ import ScreenTitle from '../components/screenTitle/ScreenTitle'
 import Datatables from '../components/datatables/Datatables'
 import "react-widgets/styles.css";
 import Calendar from "react-widgets/Calendar";
+import TimeInput from "react-widgets/TimeInput";
+
+<TimeInput style={{ width: "auto" }} />;
+
+
+
 
 const Home = () => {
   return (
@@ -18,19 +24,23 @@ const Home = () => {
             <Grid item xs={12} sm={12} md={6}>
               <PanelCard>
                 <DashboardContent
-
-
+                  card_title='Calendrier'
+                  card_icon={<i className="fas fa-home-alt primary_icon round_icon color_primary"></i>}
                 />    <Calendar></Calendar>
+
               </PanelCard>
 
             </Grid>
             <Grid item xs={12} sm={12} md={6}>
               <PanelCard>
                 <DashboardContent
-                  card_title='Inquiries'
+                  card_title='Heure'
                   card_icon={<i className="fas fa-home-alt primary_icon round_icon color_primary"></i>}
-                  card_info='45,450'
-                  last_text='18%'
+
+                />
+                <TimeInput
+                  disabled
+                  defaultValue={new Date()}
                 />
               </PanelCard>
             </Grid>
