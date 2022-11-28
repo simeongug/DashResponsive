@@ -7,7 +7,7 @@
     "@emotion/styled": "^11.10.5",
     "@mui/icons-material": "^5.10.15",
     "@mui/material": "^5.10.15",
-    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/jest-dom": "github:testing-library/jest-dom",
     "@testing-library/react": "^12.1.5",
     "@testing-library/user-event": "^13.5.0",
     "ag-grid-community": "^27.3.0",
