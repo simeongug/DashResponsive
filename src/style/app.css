@@ -382,6 +382,7 @@ body {
 .my-dark-theme .body_wrapper .side_nav .nav_wrapper .side_nav_list .main_menu .menu-item.expandable_nav {
   border-color: rgba(194, 224, 255, 0.08);
   background-color: rgba(71, 98, 130, 0.2);
+
 }
 
 .my-dark-theme .body_wrapper .side_nav .nav_wrapper .side_nav_list .main_menu .menu-item.expandable_nav .nav_content i {
@@ -426,6 +427,7 @@ body {
 }
 
 .my-dark-theme .body_wrapper .appTopBar {
+
   background-color: rgba(10, 25, 41, 0.7);
   border-color: rgba(194, 224, 255, 0.08);
 }
@@ -501,6 +503,7 @@ body {
 
 .my-light-theme .body_wrapper .body_content {
   color: #030303;
+
 }
 
 .my-light-theme .body_wrapper .body_content .sideNavOverLay::before {
@@ -516,6 +519,8 @@ body {
 .my-dark-theme .pannel_card {
   border: 1px solid #1e4976;
   background-color: #132f4c;
+  /* couleur des widgets */
+
   color: #b2bac2;
   box-shadow: unset;
 }
@@ -538,6 +543,7 @@ body {
 
 .ag-theme-alpine-dark .ag-root {
   background-color: #1c2e45;
+
 }
 
 .ag-theme-alpine-dark .ag-root-wrapper {
