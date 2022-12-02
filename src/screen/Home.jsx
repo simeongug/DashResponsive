@@ -10,13 +10,13 @@ import Calendar from "react-widgets/Calendar";
 import TimeInput from "react-widgets/TimeInput";
 import Apitest from '../Apitest.js';
 
+
 <TimeInput style={{ width: "auto" }} />;
 
-
-
-
 const Home = () => {
+
   return (
+
     <>
       <ScreenTitle pageTitle='Dashboard' />
       <Grid container spacing={2}>
@@ -39,6 +39,7 @@ const Home = () => {
                   card_icon={<i className="fas fa-home-alt primary_icon round_icon color_primary"></i>}
 
                 />
+
                 <TimeInput
                   disabled
                   defaultValue={new Date()}
@@ -62,6 +63,8 @@ const Home = () => {
                   card_info='45,450'
                   last_text='18%'
                 />
+
+
               </PanelCard>
             </Grid>
           </Grid>
@@ -78,18 +81,22 @@ const Home = () => {
             <div className="h-100">
               <BarChart />
             </div>
+
           </PanelCard>
         </Grid>
         <Grid item xs={12}>
           <PanelCard>
             <div className="card_title card_light d-flex align-items-center justify-content-between">
               <span>
-                Inq. Vs Con.
-              </span>
+                djdj
 
+              </span>
             </div>
+
           </PanelCard>
+
         </Grid>
+
         <Grid item xs={12}>
           <PanelCard>
             <div className="card_title mb-2 card_light d-flex align-items-center justify-content-between">
@@ -102,8 +109,10 @@ const Home = () => {
           </PanelCard>
         </Grid>
       </Grid>
+
     </>
   )
+
 }
 
 export default Home

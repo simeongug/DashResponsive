@@ -31,16 +31,9 @@ const HeaderAndDrawer = ({ setTogleSideBar, togleSideBar, handleMobNav }) => {
         },
         {
             route: '/customers',
-            title: 'Customers'
+            title: 'Admin'
         },
-        {
-            route: '/analytics',
-            title: 'Analytics'
-        },
-        {
-            route: '/setting',
-            title: 'Setting'
-        }
+
     ]
     return (
         <Fragment>

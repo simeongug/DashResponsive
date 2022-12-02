@@ -30,7 +30,7 @@ function App() {
         document.body.classList.add("my-light-theme");
         break;
 
-        
+
       default:
         document.body.classList.add("my-dark-theme");
         break;
