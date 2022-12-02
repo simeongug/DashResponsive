@@ -3,16 +3,15 @@ import React from 'react'
 import DashboardContent from '../components/card/DashboardContent'
 import PanelCard from '../components/card/PanelCard'
 import BarChart from '../components/charts/BarChart'
+import BarChart2 from '../components/charts/BarChart2'
+import BarChart3 from '../components/charts/BarChart3'
 import ScreenTitle from '../components/screenTitle/ScreenTitle'
 import Datatables from '../components/datatables/Datatables'
 import "react-widgets/styles.css";
 import Calendar from "react-widgets/Calendar";
 import TimeInput from "react-widgets/TimeInput";
-<<<<<<< Updated upstream
 import Apitest from '../Apitest.js';
-
-=======
->>>>>>> Stashed changes
+import Crypto from '../CryptoETHBTC.js';
 
 <TimeInput style={{ width: "auto" }} />;
 
@@ -65,8 +64,8 @@ const Home = () => {
                   card_icon={<i className="fas fa-home-alt primary_icon round_icon color_primary"></i>}
                   card_info='45,450'
                   last_text='18%'
-                />
 
+                > </DashboardContent>
 
               </PanelCard>
             </Grid>
@@ -81,23 +80,24 @@ const Home = () => {
               </span>
 
             </div> */}
+
+            <DashboardContent card_title='Cours et volume de ETH et BTC'>
+
+            </DashboardContent>
             <div className="h-100">
-              <BarChart />
+              {/* <BarChart /> */}
+
+              <Crypto />
             </div>
+
 
           </PanelCard>
         </Grid>
         <Grid item xs={12}>
           <PanelCard>
-            <div className="card_title card_light d-flex align-items-center justify-content-between">
-              <span>
-                djdj
 
-              </span>
-            </div>
-
+            sjgs
           </PanelCard>
-
         </Grid>
 
         <Grid item xs={12}>
@@ -106,7 +106,6 @@ const Home = () => {
               <span>
                 Recent Inquiries
               </span>
-
             </div>
             <Datatables />
           </PanelCard>

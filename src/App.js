@@ -36,9 +36,6 @@ function App() {
     document.body.style.backgroundColor = darkTheme[0] ? "rgb(0, 30, 60)" : "#edf3f7"
     window.localStorage.setItem('darkTheme', darkTheme[0])
   }, [darkTheme[0]])
-
-
-
   return (
     <Router>
       <DarkTheme.Provider value={darkTheme}>
