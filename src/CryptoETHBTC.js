@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 // import Jumbotron from "react-bootstrap/Jumbotron";
-import { Area, XAxis, YAxis, Bar, Tooltip, ComposedChart } from "recharts";
+import { ResponsiveContainer, Area, XAxis, YAxis, Bar, Tooltip, ComposedChart } from "recharts";
 import { format, isValid, sub } from "date-fns";
 
 /**

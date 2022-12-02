@@ -1,5 +1,6 @@
 import { Grid } from '@mui/material'
 import React from 'react'
+import { Button, Collapse } from 'react-bootstrap'
 import DashboardContent from '../components/card/DashboardContent'
 import PanelCard from '../components/card/PanelCard'
 import BarChart from '../components/charts/BarChart'
@@ -12,6 +13,11 @@ import Calendar from "react-widgets/Calendar";
 import TimeInput from "react-widgets/TimeInput";
 import Apitest from '../Apitest.js';
 import Crypto from '../CryptoETHBTC.js';
+import Convert from '../Convert.js';
+import MeteoWid from '../MeteoWid.js';
+import CollaMeteo from '../CollaMeteo'
+
+
 
 <TimeInput style={{ width: "auto" }} />;
 
@@ -46,6 +52,9 @@ const Home = () => {
                   disabled
                   defaultValue={new Date()}
                 />
+
+
+
               </PanelCard>
             </Grid>
             <Grid item xs={12} sm={12} md={6}>
@@ -60,13 +69,12 @@ const Home = () => {
             <Grid item xs={12} sm={12} md={6}>
               <PanelCard>
                 <DashboardContent
-                  card_title='Inquiries'
-                  card_icon={<i className="fas fa-home-alt primary_icon round_icon color_primary"></i>}
-                  card_info='45,450'
-                  last_text='18%'
-
+                // card_title='Inquiries'
+                // card_icon={<i className="fas fa-home-alt primary_icon round_icon color_primary"></i>}
+                // card_info='45,450'
+                // last_text='18%'
                 > </DashboardContent>
-
+                <Convert></Convert>
               </PanelCard>
             </Grid>
           </Grid>
@@ -83,20 +91,26 @@ const Home = () => {
 
             <DashboardContent card_title='Cours et volume de ETH et BTC'>
 
+
             </DashboardContent>
             <div className="h-100">
               {/* <BarChart /> */}
 
               <Crypto />
-            </div>
 
+            </div>
 
           </PanelCard>
         </Grid>
         <Grid item xs={12}>
           <PanelCard>
 
-            sjgs
+            blabalb
+
+            <MeteoWid />
+
+            {/* <CollaMeteo /> */}
+
           </PanelCard>
         </Grid>
 
