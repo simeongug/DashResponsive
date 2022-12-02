@@ -9,8 +9,6 @@ import Customer from "./screen/Customer";
 import Home from "./screen/Home";
 import './style/app.css'
 
-
-
 const DarkTheme = createContext()
 
 function App() {

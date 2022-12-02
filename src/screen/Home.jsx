@@ -8,8 +8,11 @@ import Datatables from '../components/datatables/Datatables'
 import "react-widgets/styles.css";
 import Calendar from "react-widgets/Calendar";
 import TimeInput from "react-widgets/TimeInput";
+<<<<<<< Updated upstream
 import Apitest from '../Apitest.js';
 
+=======
+>>>>>>> Stashed changes
 
 <TimeInput style={{ width: "auto" }} />;
 
