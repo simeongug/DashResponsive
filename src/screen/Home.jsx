@@ -1,20 +1,22 @@
 import { Grid } from '@mui/material'
 import React from 'react'
-import { Button, Collapse } from 'react-bootstrap'
 import DashboardContent from '../components/card/DashboardContent'
 import PanelCard from '../components/card/PanelCard'
-import BarChart from '../components/charts/BarChart'
-import BarChart2 from '../components/charts/BarChart2'
-import BarChart3 from '../components/charts/BarChart3'
+// import BarChart from '../components/charts/BarChart'
+// import BarChart2 from '../components/charts/BarChart2'
+// import BarChart3 from '../components/charts/BarChart3'
 import ScreenTitle from '../components/screenTitle/ScreenTitle'
 import Datatables from '../components/datatables/Datatables'
 import "react-widgets/styles.css";
 import Calendar from "react-widgets/Calendar";
 import TimeInput from "react-widgets/TimeInput";
 import Apitest from '../Apitest.js';
-import Crypto from '../CryptoETHBTC.js';
-import Convert from '../Convert.js';
+import Crypto from '../CryptoChart/CryptoETHBTC.js';
+import Convert from '../Convertisseur/Convert.js';
 import MeteoWid from '../Meteo/MeteoWid.js';
+import Clock1 from '../Clock1';
+
+
 
 
 
@@ -33,24 +35,24 @@ const Home = () => {
               <PanelCard>
                 <DashboardContent
                   card_title='Calendrier'
-                  card_icon={<i className="fas fa-home-alt primary_icon round_icon color_primary"></i>}
-                />    <Calendar></Calendar>
+                />     <Calendar></Calendar>
 
               </PanelCard>
 
             </Grid>
-            <Grid item xs={12} sm={12} md={6}>
+            <Grid item xs={12} sm={12} md={5}>
               <PanelCard>
                 <DashboardContent
                   card_title='Heure'
-                  card_icon={<i className="fas fa-home-alt primary_icon round_icon color_primary"></i>}
 
                 />
 
-                <TimeInput
+                {/* <TimeInput
                   disabled
                   defaultValue={new Date()}
-                />
+                /> */}
+                <Clock1 />
+
 
 
 
@@ -60,18 +62,14 @@ const Home = () => {
               <PanelCard>
                 <DashboardContent
                   card_title='ApiTest'
-                  card_icon={<i className="fas fa-home-alt primary_icon round_icon color_primary"></i>}
                 /> <Apitest></Apitest>
 
               </PanelCard>
             </Grid>
-            <Grid item xs={12} sm={12} md={6}>
+            <Grid item xs={12} sm={12} md={5}>
               <PanelCard>
-                <DashboardContent
-                // card_title='Inquiries'
-                // card_icon={<i className="fas fa-home-alt primary_icon round_icon color_primary"></i>}
-                // card_info='45,450'
-                // last_text='18%'
+                <DashboardContent card_title='Convertisseur devise'
+
                 > </DashboardContent>
                 <Convert></Convert>
               </PanelCard>
@@ -81,37 +79,25 @@ const Home = () => {
         </Grid>
         <Grid item xs={12} sm={12} md={6}>
           <PanelCard>
-            {/* <div className="card_title color_secondary d-flex align-items-center justify-content-between">
-              <span>
-                Revenue
-              </span>
-
-            </div> */}
-
             <DashboardContent card_title='Cours et volume de ETH et BTC'>
-
 
             </DashboardContent>
             <div className="h-100">
               {/* <BarChart /> */}
-
               <Crypto />
-
             </div>
-
           </PanelCard>
         </Grid>
+
         <Grid item xs={12}>
-          <PanelCard Collapse>
 
+          <PanelCard>
             blabalb
-
             <MeteoWid />
-
-            {/* <CollaMeteo /> */}
-
           </PanelCard>
+
         </Grid>
+
 
         <Grid item xs={12}>
           <PanelCard>
@@ -124,10 +110,8 @@ const Home = () => {
           </PanelCard>
         </Grid>
       </Grid>
-
     </>
   )
-
 }
 
 export default Home

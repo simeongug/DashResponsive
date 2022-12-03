@@ -65,8 +65,8 @@ const Convert = () => {
     }, [callback, currencyList.length]);
 
     return (
-        <div className="App">
-            <h1>Currency Converter</h1>
+        <div className="Convert">
+
             <div className="result">
                 <p>{`${Number(result.toFixed(2)).toLocaleString("en")} ${unit}`}</p>
             </div>
