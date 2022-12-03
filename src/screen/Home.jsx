@@ -14,8 +14,7 @@ import TimeInput from "react-widgets/TimeInput";
 import Apitest from '../Apitest.js';
 import Crypto from '../CryptoETHBTC.js';
 import Convert from '../Convert.js';
-import MeteoWid from '../MeteoWid.js';
-import CollaMeteo from '../CollaMeteo'
+import MeteoWid from '../Meteo/MeteoWid.js';
 
 
 
@@ -103,7 +102,7 @@ const Home = () => {
           </PanelCard>
         </Grid>
         <Grid item xs={12}>
-          <PanelCard>
+          <PanelCard Collapse>
 
             blabalb
 

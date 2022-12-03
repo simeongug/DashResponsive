@@ -52,6 +52,7 @@ function Meteo() {
                                 {weather.weather[0].main}
                             </span>
                         </WeatherDescription>
+
                         <Temp>{((weather.main.temp.toFixed(0) - 32) / 1.8)}°C</Temp>
                         <TempRange>
                             <TempRangeTxt>
