@@ -36,28 +36,20 @@ const Home = () => {
                 <DashboardContent
                   card_title='Calendrier'
                 />     <Calendar></Calendar>
-
               </PanelCard>
-
             </Grid>
+
             <Grid item xs={12} sm={12} md={5}>
               <PanelCard>
                 <DashboardContent
                   card_title='Heure'
-
                 />
 
-                {/* <TimeInput
-                  disabled
-                  defaultValue={new Date()}
-                /> */}
                 <Clock1 />
-
-
-
 
               </PanelCard>
             </Grid>
+
             <Grid item xs={12} sm={12} md={6}>
               <PanelCard>
                 <DashboardContent

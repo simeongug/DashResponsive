@@ -29,28 +29,30 @@ function Clock1() {
 
         return monthNames[i];
     };
+    render(){
+        return (
 
-    return (
-        <Clock>
-            {[...Array(60)].map((e, i) => (
-                <TimeContainer num={i} key={i}>
-                    <div>
-                        <Dot num={i} />
-                        {i % 5 === 0 ? (
-                            <Time num={i}>{i / 5 === 0 ? 12 : i / 5}</Time>
-                        ) : null}
-                    </div>
-                </TimeContainer>
-            ))}
-            <ShortDate>
-                {time && `${time.getDate()} ${month(time.getMonth())}`}
-            </ShortDate>
-            <Hours time={(time && time.getHours()) || 0} />
-            <Minutes time={(time && time.getMinutes()) || 0} />
-            <Seconds time={(time && time.getSeconds()) || 0} />
-            <Circle />
-        </Clock>
-    );
+            <Clock>
+                {[...Array(60)].map((e, i) => (
+                    <TimeContainer num={i} key={i}>
+                        <div>
+                            <Dot num={i} />
+                            {i % 5 === 0 ? (
+                                <Time num={i}>{i / 5 === 0 ? 12 : i / 5}</Time>
+                            ) : null}
+                        </div>
+                    </TimeContainer>
+                ))}
+                <ShortDate>
+                    {time && `${time.getDate()} ${month(time.getMonth())}`}
+                </ShortDate>
+                <Hours time={(time && time.getHours()) || 0} />
+                <Minutes time={(time && time.getMinutes()) || 0} />
+                <Seconds time={(time && time.getSeconds()) || 0} />
+                <Circle />
+            </Clock>
+        );
+    }
 } export default Clock1;
 
 const Clock = styled.div`

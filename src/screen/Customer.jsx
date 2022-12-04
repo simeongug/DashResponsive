@@ -25,7 +25,7 @@ const Customer = () => {
 
             <ScreenTitle pageTitle='Gestion de clients' />
             <PanelCard>
-                <h1>Ajouter un clients</h1>
+                <h1>Ajouter un client</h1>
                 <form noValidate onSubmit={handleSubmit(onSubmit)}>
                     <Grid container spacing={2}>
                         <Grid item xs={4}>
@@ -81,7 +81,7 @@ const Customer = () => {
             <br></br>
 
             <PanelCard>
-                <h1>Modifier un clients</h1>
+                <h1>Modifier un client</h1>
                 <form noValidate onSubmit={handleSubmit(onSubmit)}>
                     <Grid container spacing={2}>
                         <Grid item xs={4}>
@@ -136,7 +136,7 @@ const Customer = () => {
             </PanelCard>
             <br></br>
             <PanelCard>
-                <h1>Supprimer un clients</h1>
+                <h1>Supprimer un client</h1>
 
                 <form>
                     <Grid container spacing={2}>
