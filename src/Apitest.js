@@ -14,7 +14,7 @@ class Apitest extends Component {
             .then((result) => {
                 setTimeout(() => {
                     this.setState({ post: result })
-                }, 1500);
+                }, 3000);
 
             })
 
