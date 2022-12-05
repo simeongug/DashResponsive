@@ -92,7 +92,7 @@ const Home = () => {
         <Grid item xs={12}>
 
           <PanelCard>
-            blabalb
+            WOUAH ! Météo en temps réel ! En plus l'image change quand on rafraichit la page
             <MeteoWid />
           </PanelCard>
 
