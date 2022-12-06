@@ -2,58 +2,58 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 
 function Clock1() {
-    const [time, setTime] = useState(0);
+  const [time, setTime] = useState(0);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setTime(new Date());
-        }, 1000);
-        return () => clearInterval(interval);
-    }, []);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTime(new Date());
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
-    const month = (i) => {
-        const monthNames = [
-            "Jan",
-            "Feb",
-            "Mar",
-            "Apr",
-            "May",
-            "Jun",
-            "Jul",
-            "Aug",
-            "Sep",
-            "Oct",
-            "Nov",
-            "Dec"
-        ];
+  const month = (i) => {
+    const monthNames = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ];
 
-        return monthNames[i];
-    };
-    render(){
-        return (
+    return monthNames[i];
+  };
 
-            <Clock>
-                {[...Array(60)].map((e, i) => (
-                    <TimeContainer num={i} key={i}>
-                        <div>
-                            <Dot num={i} />
-                            {i % 5 === 0 ? (
-                                <Time num={i}>{i / 5 === 0 ? 12 : i / 5}</Time>
-                            ) : null}
-                        </div>
-                    </TimeContainer>
-                ))}
-                <ShortDate>
-                    {time && `${time.getDate()} ${month(time.getMonth())}`}
-                </ShortDate>
-                <Hours time={(time && time.getHours()) || 0} />
-                <Minutes time={(time && time.getMinutes()) || 0} />
-                <Seconds time={(time && time.getSeconds()) || 0} />
-                <Circle />
-            </Clock>
-        );
-    }
-} export default Clock1;
+  return (
+
+    <Clock>
+      {[...Array(60)].map((e, i) => (
+        <TimeContainer num={i} key={i}>
+          <div>
+            <Dot num={i} />
+            {i % 5 === 0 ? (
+              <Time num={i}>{i / 5 === 0 ? 12 : i / 5}</Time>
+            ) : null}
+          </div>
+        </TimeContainer>
+      ))}
+      <ShortDate>
+        {time && `${time.getDate()} ${month(time.getMonth())}`}
+      </ShortDate>
+      <Hours time={(time && time.getHours()) || 0} />
+      <Minutes time={(time && time.getMinutes()) || 0} />
+      <Seconds time={(time && time.getSeconds()) || 0} />
+      <Circle />
+    </Clock>
+  );
+}
+export default Clock1;
 
 const Clock = styled.div`
   position: relative;
