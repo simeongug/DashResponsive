@@ -52,13 +52,18 @@ function Clock1() {
       <Circle />
     </Clock>
   );
+<<<<<<< Updated upstream
 }
 export default Clock1;
+=======
+
+} export default Clock1;
+>>>>>>> Stashed changes
 
 const Clock = styled.div`
   position: relative;
-  height: 250px;
-  width: 250px;
+  width: 90%%; // ou 250px
+  height :90%;
   background-color: #1e4976;;
   border-radius: 100%;
 `;

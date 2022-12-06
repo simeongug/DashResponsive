@@ -39,10 +39,14 @@ const Home = () => {
               </PanelCard>
             </Grid>
 
+<<<<<<< Updated upstream
 
             <Grid item xs={12} sm={12} md={5}>
 
 
+=======
+            <Grid item xs={13} sm={12} md={5}>
+>>>>>>> Stashed changes
               <PanelCard>
                 <DashboardContent
                   card_title='Heure'
@@ -52,19 +56,18 @@ const Home = () => {
 
               </PanelCard>
             </Grid>
-
-            <Grid item xs={12} sm={12} md={6}>
+            {/* 
+            <Grid item xs={12} sm={12} md={1}>
               <PanelCard>
                 <DashboardContent
                   card_title='ApiTest'
                 /> <Apitest></Apitest>
 
               </PanelCard>
-            </Grid>
-            <Grid item xs={12} sm={12} md={5}>
+            </Grid> */}
+            <Grid item xs={15} sm={15} md={12}>
               <PanelCard>
                 <DashboardContent card_title='Convertisseur devise'
-
                 > </DashboardContent>
                 <Convert></Convert>
               </PanelCard>
@@ -75,7 +78,6 @@ const Home = () => {
         <Grid item xs={12} sm={12} md={6}>
           <PanelCard>
             <DashboardContent card_title='Cours et volume de ETH et BTC'>
-
             </DashboardContent>
             <div className="h-100">
               {/* <BarChart /> */}
