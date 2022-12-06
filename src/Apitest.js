@@ -25,7 +25,6 @@ class Apitest extends Component {
             <div className="Apitest">
                 <h1>Notre dernier article :</h1>
                 {(this.state.post.title) ? this.state.post.title : <p>Chargement...</p>}
-
             </div>
         );
     }

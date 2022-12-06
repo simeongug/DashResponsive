@@ -44,7 +44,7 @@ const HeaderAndDrawer = ({ setTogleSideBar, togleSideBar, handleMobNav }) => {
                             <div className="side_bar_logo">
                                 <div className="logo_icon d-flex align-items-center">
                                     <img src="./images/logo.png" alt="" />
-                                    <h3>Brand</h3>
+                                    <h3>MaxSim</h3>
                                 </div>
                             </div>
                             <div className="main_menu">
@@ -100,7 +100,7 @@ const HeaderAndDrawer = ({ setTogleSideBar, togleSideBar, handleMobNav }) => {
                         <Box sx={{ flexGrow: 0 }}>
                             <Tooltip title="">
                                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                                    <Avatar alt="Remy Sharp" src="/images/user_profile.jpg" />
+                                    <Avatar alt="Simeon gug" src="/images/Simeon.png" />
                                 </IconButton>
                             </Tooltip>
                             <Menu

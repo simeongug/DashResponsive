@@ -92,7 +92,7 @@ const Crypto = () => {
             </div>
 
             <ComposedChart
-                width={800}
+                width={550}
                 height={400}
                 data={data}
                 margin={{

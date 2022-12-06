@@ -39,7 +39,10 @@ const Home = () => {
               </PanelCard>
             </Grid>
 
+
             <Grid item xs={12} sm={12} md={5}>
+
+
               <PanelCard>
                 <DashboardContent
                   card_title='Heure'
@@ -84,7 +87,7 @@ const Home = () => {
         <Grid item xs={12}>
 
           <PanelCard>
-            blabalb
+            WOUAH ! Météo en temps réel ! En plus l'image change quand on rafraichit la page
             <MeteoWid />
           </PanelCard>
 
