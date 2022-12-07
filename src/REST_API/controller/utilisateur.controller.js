@@ -51,21 +51,21 @@ exports.test = (req, res) => {
 };
 //Create
 exports.create = (req, res) => {
-    // Validate request
+    //Valider la requete
     if (!req.body) {
         return res.status(400).send({
             message: "Please fill all required field"
         });
     }
 
-    // Create a new User
+    // créer un nouvel user
     const user = new User({
         noms: req.body.noms,
         adresse: req.body.adresse,
         telephone: req.body.telephone
     });
 
-    // Save user in the database
+    // sauvegarder les users dans la bdd
     user.save()
         .then(data => {
             res.send(data);
@@ -76,7 +76,7 @@ exports.create = (req, res) => {
         });
 };
 
-// Retrieve and return all users from the database.
+// Afficher tous les users
 exports.findAll = (req, res) => {
     User.find()
         .then(users => {
@@ -89,7 +89,7 @@ exports.findAll = (req, res) => {
 };
 
 
-// Find a single User with a id
+// Trouver un user avec l'id
 exports.findOne = (req, res) => {
     User.findById(req.params.id)
         .then(user => {
@@ -111,16 +111,16 @@ exports.findOne = (req, res) => {
         });
 };
 
-// Update a User identified by the id in the request
+// Modifier un user
 exports.update = (req, res) => {
-    // Validate Request
+    // Valider la requete
     if (!req.body) {
         return res.status(400).send({
             message: "Please fill all required field"
         });
     }
 
-    // Find user and update it with the request body
+    // Trouver un user et le modifier
     User.findByIdAndUpdate(req.params.id, {
         noms: req.body.noms,
         adresse: req.body.adresse,
@@ -145,7 +145,7 @@ exports.update = (req, res) => {
         });
 };
 
-// Delete a User with the specified id in the request
+// Supprimer un user grace à l'Id
 exports.delete = (req, res) => {
     User.findByIdAndRemove(req.params.id)
         .then(user => {
