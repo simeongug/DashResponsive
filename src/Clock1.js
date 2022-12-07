@@ -52,13 +52,8 @@ function Clock1() {
       <Circle />
     </Clock>
   );
-<<<<<<< Updated upstream
 }
 export default Clock1;
-=======
-
-} export default Clock1;
->>>>>>> Stashed changes
 
 const Clock = styled.div`
   position: relative;

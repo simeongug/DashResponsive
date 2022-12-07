@@ -1,0 +1,27 @@
+
+GET http://localhost:4000/api/users
+
+###Create
+POST http://localhost:4000/api/users
+Content-Type: application/json
+
+{
+    "noms": "Max ",
+    "adresse": "viroflay",
+    "telephone": "0606060606"
+}
+
+###Modify
+PUT http://localhost:4000/api/users/638f910170ed6706218684c8
+Content-Type: application/json
+
+{
+    "noms": "John ",
+    "adresse": "Paris",
+    "telephone": "0606060606"
+}
+
+
+###Delete
+DELETE http://localhost:4000/api/users/638f8f3b1b8c5a63e7732fc0
+

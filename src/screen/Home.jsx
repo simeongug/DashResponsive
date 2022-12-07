@@ -15,7 +15,7 @@ import Crypto from '../CryptoChart/CryptoETHBTC.js';
 import Convert from '../Convertisseur/Convert.js';
 import MeteoWid from '../Meteo/MeteoWid.js';
 import Clock1 from '../Clock1';
-
+import GetAPI from '../REST_API/GetAPI.js';
 
 
 
@@ -39,14 +39,10 @@ const Home = () => {
               </PanelCard>
             </Grid>
 
-<<<<<<< Updated upstream
 
-            <Grid item xs={12} sm={12} md={5}>
+            <Grid item xs={12} sm={12} md={6}>
 
 
-=======
-            <Grid item xs={13} sm={12} md={5}>
->>>>>>> Stashed changes
               <PanelCard>
                 <DashboardContent
                   card_title='Heure'
@@ -75,7 +71,7 @@ const Home = () => {
           </Grid>
 
         </Grid>
-        <Grid item xs={12} sm={12} md={6}>
+        <Grid item xs={12} sm={12} md={5}>
           <PanelCard>
             <DashboardContent card_title='Cours et volume de ETH et BTC'>
             </DashboardContent>
@@ -100,13 +96,13 @@ const Home = () => {
           <PanelCard>
             <div className="card_title mb-2 card_light d-flex align-items-center justify-content-between">
               <span>
-                Recent Inquiries
+                Clients Récents
               </span>
             </div>
-            <Datatables />
+            <GetAPI />
           </PanelCard>
         </Grid>
-      </Grid>
+      </Grid>²
     </>
   )
 }
