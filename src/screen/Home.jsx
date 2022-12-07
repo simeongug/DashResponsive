@@ -73,7 +73,7 @@ const Home = () => {
         </Grid>
         <Grid item xs={12} sm={12} md={6}>
           <PanelCard>
-            <DashboardContent card_title='Cours et volume de ETH et BTC'>
+            <DashboardContent card_title='Cours et volumes de ETH et BTC'>
             </DashboardContent>
             <div className="h-80">
               {/* <BarChart /> */}
